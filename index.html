@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>应用下载示例</title>
+</head>
+<body>
+    <img src="MT管理器.apk" alt="示例图片" id="image-to-download">
+    <a href="#" id="download-image" download="MT管理器.apk">下载应用</a>
+
+    <script>
+        // 获取图片元素和下载链接元素
+        const apk = document.getElementById('apk-to-download');
+        const downloadLink = document.getElementById('download-apk');
+
+        // 为下载链接元素添加点击事件处理程序
+        downloadLink.addEventListener('click', function(event) {
+            // 将图片的src属性作为下载链接元素的href属性
+            downloadLink.href = apk.src;
+        });
+    </script>
+</body>
+</html>
