@@ -1,14 +1,20 @@
-<img id="download-apk" src="MT管理器.apk" alt="apk name" style="display: none;">
-<button onclick="downloadapk()">下载应用</button>
+<img id="download1-apk" src="Via.apk" alt="apk name" style="display: none;">
+<button onclick="downloadApk('download1-apk', 'Via.apk')">下载应用</button>
+
+<img id="download2-apk" src="MT管理器.apk" alt="apk name" style="display: none;">
+<button onclick="downloadApk('download2-apk', 'MT管理器.apk')">下载应用</button>
+
+<img id="download3-apk" src="夕星美化.apk" alt="apk name" style="display: none;">
+<button onclick="downloadApk('download3-apk', '夕星美化.apk')">下载应用</button>
 
 <script>
-  function downloadapk() {
-    const downloadapk = document.getElementById('download-apk');
+  function downloadApk(downloadId, apkName) {
+    const downloadapk = document.getElementById(downloadId);
     const url = downloadapk.src.replace(/^data:apk\/[^;]/, 'data:application/octet-stream');
     
     const anchor = document.createElement('a');
     anchor.href = url;
-    anchor.download = 'apk-name.apk';
+    anchor.download = apkName;
     anchor.click();
   }
 </script>
